@@ -80,5 +80,50 @@ namespace AcademyF.Week2.EsercitazioneDesignPattern.Test
             Assert.Equal("MediumCompany", mediumCompany.GetType().Name);
         }
 
+        [Fact]
+        public void ShouldCreateBigCompanyWithOneHundredFiftyEmployees()
+        {
+            //Mi aspetto la creazione di un'azienda di medie dimensioni nel caso in cui
+            //il numero di dipendenti sia pari a 50
+
+            //ARRANGE
+
+            //Dichiaro una variabile con il numero dipendenti
+            int numeroDipendenti = 150;
+
+            //Creo il componente che sarà in grado di creare la mia company
+            FactoryCompany factoryCompany = new FactoryCompany();
+
+            //ACT
+
+            //Richiamo il metodo di creazione della nostra azienda
+            ICompany mediumCompany = factoryCompany.CreateCompany(numeroDipendenti);
+
+            //ASSERT
+            Assert.Equal("BigCompany", mediumCompany.GetType().Name);
+        }
+
+        [Fact]
+        public void ShouldCreateMultinationCompanyWithOneThousandFiveHundredEmployees()
+        {
+            //Mi aspetto la creazione di un'azienda di medie dimensioni nel caso in cui
+            //il numero di dipendenti sia pari a 50
+
+            //ARRANGE
+
+            //Dichiaro una variabile con il numero dipendenti
+            int numeroDipendenti = 1500;
+
+            //Creo il componente che sarà in grado di creare la mia company
+            FactoryCompany factoryCompany = new FactoryCompany();
+
+            //ACT
+
+            //Richiamo il metodo di creazione della nostra azienda
+            ICompany mediumCompany = factoryCompany.CreateCompany(numeroDipendenti);
+
+            //ASSERT
+            Assert.Equal("MultinationalCompany", mediumCompany.GetType().Name);
+        }
     }
 }

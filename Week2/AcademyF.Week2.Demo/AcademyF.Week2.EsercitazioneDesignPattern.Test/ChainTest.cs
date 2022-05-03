@@ -268,6 +268,7 @@ namespace AcademyF.Week2.EsercitazioneDesignPattern.Test
             Employee employee = new Employee()
             {
                 DateOfBirth = new DateTime(1986, 1, 1),
+                DateHiring = new DateTime(2002, 1, 1),
                 ProductivityRate = 80,
                 AbsenceRate = 70
             };
